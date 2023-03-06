@@ -22,6 +22,10 @@ void main(){
   var isAlive = true;
   //bool isAlive = true;
 
+  // This will give null
+  var nullCheck;
+
   print("Name : $name,Age: $age,status:$isAlive");
   print("percent: $percent,exponent:$exponent");
+  print("The default value is $nullCheck");
 }
