@@ -17,10 +17,22 @@ void main(){
   adapter.someMethod(foo);
 
 
+  // 1st way of callback
+
   // Using Higher order function like a callback
   adapter.someCallback((position) {
     print("The position is $position");
   });
+
+  // 2nd way of callback
+
+  //getting callback of the clicked position
+  adapter.f = (position){
+    print("Clicked position is $position");
+  };
+
+  // triggering a click
+  adapter.someViewClick();
 
 }
 
@@ -38,6 +50,8 @@ Function someFunction1(String s){
 
 class Adapter{
 
+  Function f = (int pos) => {};
+
   // Using a normal function as param in higher order function
   void someMethod(void action(String msg)){
       // action.call("Lambda Function called");
@@ -46,6 +60,10 @@ class Adapter{
 
   void someCallback(void callback(int position)){
     callback.call(3);
+  }
+
+  void someViewClick(){
+    f.call(100);
   }
 
 }
