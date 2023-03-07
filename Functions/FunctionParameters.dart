@@ -1,3 +1,15 @@
+/*
+# For Named Params  we need to use a default value which can be:
+  * String? variable => Making nullable variables with default value as null
+  * String variable= "" => Assigning a default value
+  * required String variable => using required keyword to make it mandatory
+
+# For Positional Params  we need to use a default value which can be:
+  * String? variable => Making nullable variables with default value as null
+  * String variable= "" => Assigning a default value
+  * we can not use required keyword for positional params
+ */
+
 void main(){
 
   // passing required parameters
@@ -61,9 +73,11 @@ void detailsOptionalNamed(String state,String capital,{ String? district,
 /*
 function with explicitly required parameters but in Named sequence
 Here even if we used {} for optional named parameters we can still
-make some parameters as manadatory by using required
+make some parameters as mandatory by using required
+OR
+We can assign a default value to the params instead of required keyword
 */
-void detailsRequiredNamed({required String state,String? capital,required
+void detailsRequiredNamed({String state="",String? capital,required
 String district, int? pin}){
 
   print("state is $state");
