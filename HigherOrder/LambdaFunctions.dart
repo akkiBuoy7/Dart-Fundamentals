@@ -6,12 +6,12 @@ void main(){
     print(s);
   };
 
-  var mutiplyingNumbers = (int a,int b){ // function with return type
+  var multiplyingNumbers = (int a,int b){ // function with return type
     return a*b;
   };
 
   addingNumbers(5,4);
-  print(mutiplyingNumbers(5,4));
+  print(multiplyingNumbers(5,4));
 
   print("\n");
 
