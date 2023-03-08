@@ -15,7 +15,7 @@ Here we need to use static const
 class SomeClass{
 
 
-   final stateName = "Karnatak";
+   final stateName = "Karnataka";
    // stateName = "Delhi";  Not possible to reassign values
 
    //const PI=3.14; // can not declare const variable inside a class

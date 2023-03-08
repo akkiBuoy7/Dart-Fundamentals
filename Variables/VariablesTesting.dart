@@ -22,10 +22,21 @@ void main(){
   var isAlive = true;
   //bool isAlive = true;
 
+  // int and double are subtypes of num
+  num varN = 20.20; // double
+  num varI = 20; // int
+
   // This will give null
   var nullCheck;
 
+  print("num type>> $varN");
   print("Name : $name,Age: $age,status:$isAlive");
   print("percent: $percent,exponent:$exponent");
   print("The default value is $nullCheck");
+
+
+  //parsing
+  var a1 = num.parse("1");
+  var a2 = num.parse("2.34");
+  print("parsing>>> $a1   $a2");
 }

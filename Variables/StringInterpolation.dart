@@ -23,4 +23,13 @@ void main(){
   var b = 20;
   // using int in string interpolation
   print("The area of rectangle with length $l and breadth $b is ${l*b}");
+
+  var multi= ''' This is a multiline sentence.
+  we are making it a long sentence''';
+
+  print(multi);
+
+  var raw = r' This is a ${raw} sentence';
+  print(raw);
+
 }
