@@ -15,5 +15,7 @@ void main(){
     case "Agartala":
       print("Tripura");
       break;
+    default:
+      print("Invalid input!");
   }
 }

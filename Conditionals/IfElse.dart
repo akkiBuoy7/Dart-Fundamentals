@@ -31,7 +31,7 @@ void main(){
 
   // Conditional Expression
   /*
-  If value is null will return the statement 2 after :
+  If value is null will return the statement 2 after ??
    */
   var name = null;
   var result  = name ?? "Guest User";
