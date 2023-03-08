@@ -3,7 +3,7 @@
 # Within a class we can't have both default and parameterized constructor
 # Within a class we can have multiple Named Constructors but with different
 Names
-# Overloading of constructor with same name is not allowed.
+# Overloading of constructor with same name and different params is not allowed.
   So if we want multiple constructors we should have different Names
 # Since Overloading not allowed so we can't use Multiple parameterized default
  constructors. So we need Named Constructors if we want multiple constructors.
@@ -53,7 +53,7 @@ class SomeClass{
 
 
 
-  // Multiple Parameterized constructor not allowed
+  // Multiple Parameterized constructor not allowed,overloading is not allowed
   // SomeClass(int _caseNum,String _type,String g){
   // }
 

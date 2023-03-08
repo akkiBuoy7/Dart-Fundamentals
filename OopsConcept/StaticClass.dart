@@ -1,6 +1,6 @@
 /*
 # Static Method or Variable belongs to class Level
-# Static Method can not access no static method or variable
+# Static Method can not access any static method or variable
 # Normal Method can access static Method or variable
  */
 
@@ -27,6 +27,7 @@ class Circle{
     print("Area is ${PI * RADIUS*RADIUS}");
   }
 
+  // possible to access static members inside non static context
   void changeRadius(){
     RADIUS = 20;
     calculateArea();

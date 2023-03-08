@@ -23,7 +23,7 @@ class Vehicle extends Machine{
   // }
 
   /*
-  Since parent has no-args constructor so we don't need to manually call
+  Since parent Machine has no-args constructor so we don't need to manually call
   super() or parent class constructor
    */
   Vehicle(this.hasEngine){
@@ -43,6 +43,7 @@ class Car extends Vehicle{
   /*
   Since Parent don't have no-args constructor so we need to manually call
   super() or parent class constructor
+  here we called default parameterized constructor
    */
   Car(this.type,this.hasEngine):super(hasEngine){
     print("Calling Parameterized Constructor");

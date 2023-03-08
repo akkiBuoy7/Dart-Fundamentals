@@ -44,6 +44,13 @@ void main(){
   print(dog.getHabitat());
   print("\n");
 
+  // this will print only parent class implementation
+  //as it was not overridden in dog class
+  dog.someMethod();
+  print("\n");
+  // this will print both child and parent implementation
+  tiger.someMethod();
+
 }
 
 class Animal{// primary parent class
@@ -51,6 +58,10 @@ class Animal{// primary parent class
   var type;
 
   String isAlive() => "The $type are living being : $isLiving";
+
+  void someMethod(){
+    print("Some method in parent class");
+  }
 }
 
 class DomesticAnimal extends Animal{// secondary parent class
@@ -67,13 +78,23 @@ class WildAnimal extends Animal{// secondary parent class
 
 class Dog extends DomesticAnimal{// inheriting secondary parent
   // inheriting primary parent method
+  @override
   String isAlive() => "The $type are living being : $isLiving";
   // inheriting secondary parent method
+  @override
   String getHabitat() => "$type lives in $habitat";
 }
 class Tiger extends WildAnimal{// inheriting secondary parent
   // inheriting primary parent method
+  @override
   String isAlive() => "The $type are living being : $isLiving";
   // inheriting secondary parent method
+  @override
   String getHabitat() => "$type lives in $habitat";
+
+  @override
+  void someMethod() {
+    super.someMethod(); //calling parent method by super keyword
+    print("some method overridden in child class");
+  }
 }
