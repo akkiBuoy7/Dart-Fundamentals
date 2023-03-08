@@ -42,7 +42,7 @@ void main(){
     print("result is $result");
   } catch (e,s){
     print("STACK TRACE");
-    print("Caught Exception is $e");
+    print("Caught Exception is ${e.toString()}");
     print("Stack trace is $s");
   }
 

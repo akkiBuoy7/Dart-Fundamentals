@@ -5,6 +5,9 @@
  # Functions are considered a s objects in dart.
  #If return type is not specified function will return null just like python
  better to use void in such cases.
+ # => generally is used when we have a single line function
+ but it can also be used with multiline.
+ # => It does not require return type. It can have implicit return type
  */
 void main(){
 
@@ -32,6 +35,12 @@ void findPerimeterShort(int length, int breadth) => print("The perimeter is by s
     "${2*(length+breadth)}");
 
 // Short Hand Syntax function  with return type
-int findAreaShort(var length , var breadth) => length * breadth; //even if
-// return type is int , we can return var
+// Here we may or may not mention the return type.
+// => is implicit return type syntax
+ findAreaShort(var length , var breadth) => {
+   length * breadth
+ };
+
+int findAreaShortWithReturnTypeMentioned(var length , var breadth)
+=> length * breadth;
 
