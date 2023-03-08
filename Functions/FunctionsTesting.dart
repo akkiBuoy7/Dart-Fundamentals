@@ -1,7 +1,10 @@
 
 /*
- The short syntax => can be used only when the function has a single line.
+ # The short syntax => can be used only when the function has a single line.
  Just like single expression function in kotlin
+ # Functions are considered a s objects in dart.
+ #If return type is not specified function will return null just like python
+ better to use void in such cases.
  */
 void main(){
 

@@ -1,4 +1,14 @@
 /*
+
+Required => These are mandatory params need to pass to a function.
+Optional =>
+* Positional=> " [] " Can use default value. Not mandatory
+* Named=> " {} " Optional as well can call by Name of the param
+* Default=> " {} " Can use default value
+
+
+
+
 # For Named Params  we need to use a default value which can be:
   * String? variable => Making nullable variables with default value as null
   * String variable= "" => Assigning a default value
@@ -31,8 +41,8 @@ void main(){
   print("Required Named");
 
   // pin capital is optional
-  // district state is required but sequence has been changed
-  detailsRequiredNamed(district:"Sadar",state: "Tripura",capital: "Agartala");
+  // district  is required only
+  detailsRequiredNamed(district:"Sadar");
 }
 
 // normal function with mandatory parameters
@@ -66,9 +76,7 @@ void detailsOptionalNamed(String state,String capital,{ String? district,
   print("district is $district");
   print("pin is $pin");
   print("");
-
 }
-
 
 /*
 function with explicitly required parameters but in Named sequence
