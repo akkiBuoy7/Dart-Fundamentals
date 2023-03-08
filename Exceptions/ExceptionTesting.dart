@@ -1,3 +1,11 @@
+/*
+# finally => It is executed irrespective of exception occurrence
+# catch => can handle exception by passing exception as method param
+can print the stacktrace too
+# on => If we know the type of exception
+try => covers the code that might give exception
+ */
+
 void main(){
 
   // This will give exception
@@ -51,19 +59,29 @@ void main(){
     print("Finally this code will be executed");
   }
 
-  /* case5: When we want throw a custom Exception
+  /* case5: When we want to throw a custom Exception
   */
   print("\ncase 5");
   try{
     depositAmount(-1000);
   } on CustomException{
-    print("Caught Exception is ${CustomException().customErrorMessage()}");
+    print("Caught Exception is ${CustomException.customErrorMessage()}");
   }
 
+
+  print("\ncase 6");
+  // using on and catch together
+  try{
+    depositAmount(-1000);
+  } on CustomException catch(e){
+    //this will give type of exception class instance
+    print("Exception object is > $e");
+    print("Caught Exception is ${CustomException.customErrorMessage()}");
+  }
 }
 
 class CustomException{
-  String customErrorMessage() => "Deposit amount can not be less than 0";
+  static String customErrorMessage() => "Deposit amount can not be less than 0";
 }
 
 void depositAmount(int value){
