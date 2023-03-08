@@ -78,14 +78,47 @@ void main(){
     print("Exception object is > $e");
     print("Caught Exception is ${CustomException.customErrorMessage()}");
   }
+
+
+  try{
+    depositAmountCustom(-1000);
+  } catch(e){
+    //this will give the message passed in custom exception
+    print(e);
+  }
 }
 
 class CustomException{
   static String customErrorMessage() => "Deposit amount can not be less than 0";
+
+  void someFunction(){
+
+  }
+}
+
+
+// Creating Custom Exception By implementing the exception class
+class CustomException1 implements Exception{
+
+  String msg = "";
+
+  CustomException1(this.msg);
+
+  @override
+  String toString(){
+    return msg;
+  }
+
 }
 
 void depositAmount(int value){
   if(value<0){
     throw CustomException();
+  }
+}
+
+void depositAmountCustom(int value) {
+  if (value < 0) {
+    throw CustomException1("THIS IS CUSTOM EXCEPTION");
   }
 }
