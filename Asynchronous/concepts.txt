@@ -1,0 +1,31 @@
+Isolate : Dart is a single thread language. It executes everything in the main thread which is also
+called main ISOLATE.
+So to create multiple threads or isolates we need to use isolate.spawn() method.
+This is not recommended because each isolate has it's own memory and thus making it very inefficient
+to create multiple isolates for asynchronous calls.
+To solve this we have Future and Stream which will run in the same isolate but will not block the
+isolate . So any long computation if declared Future or Stream can be listened or subscribed
+separately without blocking the isolate.
+
+Event Queue : It is the queue through which events come and gets executed by the event handler.
+The events are executed in a sequential manner.
+
+Microtask Queue : It is separate queue but it has more priority than event queue.
+It means the events in the micotask queue will be executed earlier than the events in event queue.
+
+
+
+Future :
+Anything that we want to achieve asynchronously we can wrap it in future. It will emit value
+single time.
+    await: If we want to wait for the Future task to end then we should use await. This will block the
+    isolate and thus making the code synchronous.
+
+    then: If we don't want to block the isolate then we can use then which will return the value in
+    future thus not blocking the isolate.
+
+    whenCompleted: If we want some code to execute even if success or error occurs then we should use
+    whenCompleted.
+    It also works asynchronously. It is like a finally block which will mandatory get executed.
+
+    value: Will emit immediately
