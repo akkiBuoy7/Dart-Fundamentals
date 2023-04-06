@@ -17,7 +17,8 @@ It means the events in the micotask queue will be executed earlier than the even
 
 Future :
 Anything that we want to achieve asynchronously we can wrap it in future. It will emit value
-single time.
+single time. We need to use await to get the values.
+
     await: If we want to wait for the Future task to end then we should use await. This will block the
     isolate and thus making the code synchronous.
 
@@ -29,3 +30,15 @@ single time.
     It also works asynchronously. It is like a finally block which will mandatory get executed.
 
     value: Will emit immediately
+
+Stream :
+Anything that we want to achieve asynchronously we can wrap it in stream. It will emit value
+sequentially and we need to listen or subscribe to the value using listen() or StreamSubscription.
+We can also use await for to get the stream values for any computation.
+
+    StreamController :  class to create streams
+    streamController.sink : used to add event to stream using add method
+    streamController.stream : can be listened only once
+    streamController.stream.asBroadcastStream() : can be listened multiple times
+    streamController.stream.listen((event) {} : subscribe to stream events
+    StreamSubscription : Create it when need to cancel a stream subscription after work is done
