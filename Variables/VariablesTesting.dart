@@ -1,5 +1,4 @@
-void main(){
-
+void main() {
   /*
   # By default all values will be null.
   # We can use var directly like kotlin or else we have to explicitely mention
@@ -8,7 +7,7 @@ void main(){
   # In numerical type we have only int and double. Double can be assigned
   both long and exponential values
    */
-  var name ="Akash";
+  var name = "Akash";
   //String name = "Akash";
 
   var age = 30;
@@ -33,7 +32,6 @@ void main(){
   print("Name : $name,Age: $age,status:$isAlive");
   print("percent: $percent,exponent:$exponent");
   print("The default value is $nullCheck");
-
 
   //parsing
   var a1 = num.parse("1");
