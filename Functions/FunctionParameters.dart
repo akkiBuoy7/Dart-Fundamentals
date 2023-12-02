@@ -20,34 +20,32 @@ Optional =>
   * we can not use required keyword for positional params
  */
 
-void main(){
-
+void main() {
   // passing required parameters
-  details("Tripura","Agartala","Sadar",799007);
+  details("Tripura", "Agartala", "Sadar", 799007);
 
   print("Optional Positional");
 
   // passing optional positional parameters as empty
-  detailsOptionalPositional("Tripura","Agartala");
+  detailsOptionalPositional("Tripura", "Agartala");
 
   print("Optional Named");
 
   //passing optional Named parameters as empty
-  detailsOptionalNamed("Tripura","Agartala");
+  detailsOptionalNamed("Tripura", "Agartala");
 
   // passing optional named parameters with different sequence
-  detailsOptionalNamed("Tripura","Agartala",pin:799007,district: "Sadar");
+  detailsOptionalNamed("Tripura", "Agartala", pin: 799007, district: "Sadar");
 
   print("Required Named");
 
   // pin capital is optional
   // district  is required only
-  detailsRequiredNamed(district:"Sadar");
+  detailsRequiredNamed(district: "Sadar");
 }
 
 // normal function with mandatory parameters
-void details(String state,String capital,String district,int pin){
-
+void details(String state, String capital, String district, int pin) {
   print("state is $state");
   print("capital is $capital");
   print("district is $district");
@@ -56,21 +54,18 @@ void details(String state,String capital,String district,int pin){
 }
 
 //function with Optional positional parameters
-void detailsOptionalPositional(String state,String capital,[String? district,
-  int? pin]){
-
+void detailsOptionalPositional(String state, String capital,
+    [String? district, int? pin]) {
   print("state is $state");
   print("capital is $capital");
   print("district is $district");
   print("pin is $pin");
   print("");
-
 }
 
 //function with Optional named parameters
-void detailsOptionalNamed(String state,String capital,{ String? district,
-   int? pin}){
-
+void detailsOptionalNamed(String state, String capital,
+    {String? district, int? pin}) {
   print("state is $state");
   print("capital is $capital");
   print("district is $district");
@@ -85,9 +80,8 @@ make some parameters as mandatory by using required
 OR
 We can assign a default value to the params instead of required keyword
 */
-void detailsRequiredNamed({String state="",String? capital,required
-String district, int? pin}){
-
+void detailsRequiredNamed(
+    {String state = "", String? capital, required String district, int? pin}) {
   print("state is $state");
   print("capital is $capital");
   print("district is $district");

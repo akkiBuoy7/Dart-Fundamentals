@@ -5,19 +5,36 @@
 to a typeDef object and hence can be called
  */
 
-int multiplication(int a,int b){
-  return a*b;
+import 'dart:async';
+
+int multiplication(int a, int b) {
+  return a * b;
 }
-int addition(int a,int b){
-  return a+b;
+
+int addition(int a, int b) {
+  return a + b;
+}
+
+int subtraction(int a, int b) {
+  return a - b;
 }
 
 typedef Operation(int a, int b);
-void main(){
-
+void main() {
   Operation o = multiplication;
-  print(o(5,6));
+  print(o(5, 6));
 
   Operation o1 = addition;
-  print(o1(5,6));
+  print(o1(5, 6));
+
+  TypCls typCls = TypCls(subtraction, 9, 7);
+}
+
+class TypCls {
+  Operation? o;
+  TypCls(Operation o, int x, int y) {
+    this.o = o;
+
+    print(o(x, y));
+  }
 }

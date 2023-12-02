@@ -1,11 +1,10 @@
-
 /*
 Very similar to JAVA
  */
-void main(){
+void main() {
   var state = "Bengaluru";
   // only String and int is allowed in switch argument
-  switch(state){
+  switch (state) {
     case "Bengaluru":
       print("Karnataka");
       break;
