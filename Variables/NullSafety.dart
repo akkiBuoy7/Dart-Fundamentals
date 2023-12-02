@@ -8,12 +8,12 @@
 # ?? can be used to pass a default value if value is null
  */
 
-main(){
+main() {
   int a; // This is not nullable
   //print(a); // so we can't use it without initialization.
 
   // since we initialized non nullable b so it can be used safely
-  int b=10;
+  int b = 10;
   print(b);
 
   int? c; // This is nullable i.e default value is null
@@ -28,14 +28,14 @@ main(){
   //This will lead to exception
   //calSum(d!,e!); // Null assertion
 
-  int? y=50;
+  int? y = 50;
   print(y);
   //Here we initialised y so compiler knows it is not null. so np need to use !
   calSum(y, e!);
 
-  calSum(d??2, e??3); // Passing default value if variable is null
+  calSum(d ?? 2, e); // Passing default value if variable is null
 }
 
-void calSum(int a , int b){
-  print("sum is ${a+b}");
+void calSum(int a, int b) {
+  print("sum is ${a + b}");
 }
